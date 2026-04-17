@@ -1,0 +1,11 @@
+commit f0c622dfc8ad9c046a9dae10c5e2d593e2a02dc2
+Author: andre <mcastellanosm12@miumg.edu.gt>
+Date:   Fri Apr 17 12:02:46 2026 -0600
+
+    proyecto
+
+commit 0f119152b815658555f5e8e8b9c7bf88a75270a6
+Author: AndreCastellanos12 <mcastellanosm12@miumg.edu.gt>
+Date:   Fri Apr 17 11:50:25 2026 -0600
+
+    Initial commit
