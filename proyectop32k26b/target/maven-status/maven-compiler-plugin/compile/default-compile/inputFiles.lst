@@ -14,6 +14,7 @@ C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP202
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Vista\frmRestablecerContraseña.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Vista\frmProcesoAplicacionUsuario.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\clsPerfil.java
+C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Modelo\TipoPuestoDAO.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\clsAplicaciones.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\clsUsuario.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Vista\frmMantenimientoTipo_puesto.java
@@ -21,6 +22,7 @@ C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP202
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Modelo\AplicacionesDAO.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\clsAsignacionAplicacionUsuario.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Modelo\AsignacionAplicacionPerfilDAO.java
+C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\TipoPuesto.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Vista\frmLogin.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Vista\frmProcesoPerfilUsuario.java
 C:\Users\andre\OneDrive\Escritorio\segundo parcial 5to semestre\PrototipoP3SP2026\proyectop32k26b\src\main\java\Controlador\clsUsuarioConectado.java

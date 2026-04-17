@@ -58,9 +58,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
         mnuSalirSistema = new javax.swing.JCheckBoxMenuItem();
         mnuCatalogos = new javax.swing.JMenu();
         mnuCatalogosMantenimientos = new javax.swing.JMenu();
-        mantenimientoUsuarios = new javax.swing.JMenuItem();
         frmMantenimientoPerfiles = new javax.swing.JMenuItem();
-        frmMantenimientoAplicaciones = new javax.swing.JMenuItem();
         mnuProcesos = new javax.swing.JMenu();
         frmProcesoPerfilUsuario = new javax.swing.JMenuItem();
         frmProcesoAplicacionPerfil = new javax.swing.JMenuItem();
@@ -114,7 +112,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
 
         mnuGeneral.add(mnuArchivo);
 
-        mnuCatalogos.setText("Catalogos");
+        mnuCatalogos.setText("examen");
 
         mnuCatalogosMantenimientos.setText("Mantenimientos");
         mnuCatalogosMantenimientos.addActionListener(new java.awt.event.ActionListener() {
@@ -123,15 +121,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
             }
         });
 
-        mantenimientoUsuarios.setText("Mantenimiento Usuarios");
-        mantenimientoUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mantenimientoUsuariosActionPerformed(evt);
-            }
-        });
-        mnuCatalogosMantenimientos.add(mantenimientoUsuarios);
-
-        frmMantenimientoPerfiles.setText("Mantenimiento Perfiles");
+        frmMantenimientoPerfiles.setText("Mantenimiento tipo_puesto");
         frmMantenimientoPerfiles.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 frmMantenimientoPerfilesAncestorAdded(evt);
@@ -147,14 +137,6 @@ public class MdiSeguridad extends javax.swing.JFrame {
             }
         });
         mnuCatalogosMantenimientos.add(frmMantenimientoPerfiles);
-
-        frmMantenimientoAplicaciones.setText("Mantenimiento Aplicaciones");
-        frmMantenimientoAplicaciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                frmMantenimientoAplicacionesActionPerformed(evt);
-            }
-        });
-        mnuCatalogosMantenimientos.add(frmMantenimientoAplicaciones);
 
         mnuCatalogos.add(mnuCatalogosMantenimientos);
 
@@ -304,16 +286,6 @@ public class MdiSeguridad extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mnuCatalogosMantenimientosActionPerformed
 
-    private void mantenimientoUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mantenimientoUsuariosActionPerformed
-        // TODO add your handling code here:
-        System.out.println("entre a mantenimiento usuarios");
-        frmMantenimientoUsuario ventana = new frmMantenimientoUsuario();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-    }//GEN-LAST:event_mantenimientoUsuariosActionPerformed
-
     private void frmMantenimientoPerfilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frmMantenimientoPerfilesActionPerformed
         // TODO add your handling code here:
         System.out.println("entre a mantenimiento perfiles");
@@ -327,16 +299,6 @@ public class MdiSeguridad extends javax.swing.JFrame {
     private void frmMantenimientoPerfilesAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_frmMantenimientoPerfilesAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_frmMantenimientoPerfilesAncestorAdded
-
-    private void frmMantenimientoAplicacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frmMantenimientoAplicacionesActionPerformed
-        // TODO add your handling code here:
-        System.out.println("entre a mantenimiento Aplicaciones");
-        frmMantenimientoAplicaciones ventana = new frmMantenimientoAplicaciones();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-    }//GEN-LAST:event_frmMantenimientoAplicacionesActionPerformed
 
     private void frmMantenimientoBitacoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frmMantenimientoBitacoraActionPerformed
         // TODO add your handling code here:
@@ -432,7 +394,6 @@ public class MdiSeguridad extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem frmMantenimientoAplicaciones;
     private javax.swing.JMenuItem frmMantenimientoBitacora;
     private javax.swing.JMenuItem frmMantenimientoPerfiles;
     private javax.swing.JMenuItem frmProcesoAplicacionPerfil;
@@ -446,7 +407,6 @@ public class MdiSeguridad extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem mantenimientoUsuarios;
     private javax.swing.JMenu mnuArchivo;
     private javax.swing.JMenu mnuAyudas;
     private javax.swing.JMenu mnuCatalogos;
