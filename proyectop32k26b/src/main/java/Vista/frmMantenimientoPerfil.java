@@ -22,7 +22,13 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import javax.swing.JOptionPane;
+import Controlador.TipoPuesto;
+import Modelo.TipoPuestoDAO;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 
+/**
 
 
 /**
@@ -175,7 +181,7 @@ bitacora.setUsucodigo(usuario);
         });
 
         label1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        label1.setText("Perfiles");
+        label1.setText("tipo puesto");
 
         btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +209,7 @@ bitacora.setUsucodigo(usuario);
 
             },
             new String [] {
-                "ID", "Nombre", "Estado"
+                "ID tipo puesto", "Nombre puesto", "salario"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -229,7 +235,7 @@ bitacora.setUsucodigo(usuario);
         label4.setText("ID a buscar");
 
         label9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        label9.setText("Estatus");
+        label9.setText("salario");
 
         txtEstado.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         txtEstado.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
@@ -277,7 +283,7 @@ bitacora.setUsucodigo(usuario);
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label1)
-                        .addGap(294, 592, Short.MAX_VALUE))
+                        .addGap(294, 569, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
                         .addContainerGap())))
@@ -326,47 +332,49 @@ bitacora.setUsucodigo(usuario);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
-        if(txtCodigo.getText().isEmpty()){
+                                               
+    if(txtCodigo.getText().isEmpty()){
         JOptionPane.showMessageDialog(null, "Ingrese un código");
         return;
     }
 
-    clsPerfil perfil = new clsPerfil();
-    perfil.setPercodigo(Integer.parseInt(txtCodigo.getText()));
+    TipoPuesto tipoPuesto = new TipoPuesto();
+    tipoPuesto.setId_tipo_puesto(Integer.parseInt(txtCodigo.getText()));
 
-    PerfilDAO dao = new PerfilDAO();
-    clsBitacora bitacora = crearBitacora("Eliminar perfil");
-dao.eliminarPerfil(perfil, bitacora);
+    TipoPuestoDAO dao = new TipoPuestoDAO();
+    dao.eliminarTipoPuesto(tipoPuesto);
 
-    JOptionPane.showMessageDialog(null, "Perfil eliminado");
+    JOptionPane.showMessageDialog(null, "Tipo de puesto eliminado");
 
     llenadoDeTablas();
     limpiarTextos();
-    
+
+
     
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        if(txtNombre.getText().isEmpty() || txtEstado.getText().isEmpty()){
-    JOptionPane.showMessageDialog(null, "Complete los campos");
-    return;
+                                            
+
+                                              
+    if(txtNombre.getText().isEmpty()){
+        JOptionPane.showMessageDialog(null, "Complete el campo Nombre");
+        return;
     } 
     
-    clsPerfil perfil = new clsPerfil();
-    perfil.setPernombre(txtNombre.getText());
-    perfil.setPerestado(txtEstado.getText());
+    TipoPuesto tipoPuesto = new TipoPuesto();
+    tipoPuesto.setNombre_puesto(txtNombre.getText());
 
-    PerfilDAO dao = new PerfilDAO();
-    clsBitacora bitacora = crearBitacora("Insertar perfil");
-    dao.insertarPerfil(perfil, bitacora);
+    TipoPuestoDAO dao = new TipoPuestoDAO();
+    dao.insertarTipoPuesto(tipoPuesto);
 
-    JOptionPane.showMessageDialog(null, "Perfil registrado");
-    
-    
+    JOptionPane.showMessageDialog(null, "Tipo de puesto registrado");
 
     llenadoDeTablas();
     limpiarTextos();
+
+
+
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -392,27 +400,27 @@ clsPerfil perfil = dao.obtenerPerfilPorId(id, bitacora);
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
 //        // TODO add your handling code here:
+                                               
     if(txtCodigo.getText().isEmpty()){
-    JOptionPane.showMessageDialog(null, "Seleccione un registro");
-    return;
+        JOptionPane.showMessageDialog(null, "Seleccione un registro");
+        return;
     }
-    
 
+    TipoPuesto tipoPuesto = new TipoPuesto();
+    tipoPuesto.setId_tipo_puesto(Integer.parseInt(txtCodigo.getText()));
+    tipoPuesto.setNombre_puesto(txtNombre.getText());
+    // Si ya no quieres usar salario, esta línea se elimina
+    // tipoPuesto.setSalario(Double.parseDouble(txtSalario.getText()));
 
-    clsPerfil perfil = new clsPerfil();
-    perfil.setPercodigo(Integer.parseInt(txtCodigo.getText()));
-    perfil.setPernombre(txtNombre.getText());
-    perfil.setPerestado(txtEstado.getText());
+    TipoPuestoDAO dao = new TipoPuestoDAO();
+    dao.actualizarTipoPuesto(tipoPuesto);
 
-    PerfilDAO dao = new PerfilDAO();
-    clsBitacora bitacora = crearBitacora("Modificar perfil");
-dao.actualizarPerfil(perfil, bitacora);
-
-    JOptionPane.showMessageDialog(null, "Perfil modificado");
+    JOptionPane.showMessageDialog(null, "Tipo de puesto modificado");
 
     llenadoDeTablas();
     limpiarTextos();
-    
+
+
     
     }//GEN-LAST:event_btnModificarActionPerformed
 
